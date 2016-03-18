@@ -14,8 +14,6 @@ class IndexView(TemplateView):
         search_string = self.request.GET.get('search_string')
         scraped_content = requests.get("http://www.guitartabs.cc/search.php?tabtype=any&band=&song={}".format(search_string)).content
         clean_data = BeautifulSoup(scraped_content).find(class_="tabslist")
-        for link in clean_data.find_all('a'):
-            link["href"] = reverse('tab_view', kwargs={'url': link["href"]})
         context["scraped_content"] = clean_data.prettify()
         return context
 

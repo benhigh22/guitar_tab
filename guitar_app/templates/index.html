@@ -3,12 +3,14 @@
 {% block content %}
 <br>
 <form class="" action="" method="get">
-  <input class="purple lighten-4" type="text" name="search_string" placeholder="Enter Song">
+  <input class="search_bar purple lighten-2" type="text" name="search_string" placeholder="Enter Song">
   <button class="btn waves-effect waves-light purple lighten-2" type="submit" name="action">Search</button>
 </form>
 <br>
 <h4>Click the song name to see the Tab!</h4>
+<br>
 {% autoescape off %}
-{{ scraped_content }}
+<div class="tablink">
+{{ scraped_content }}</div>
 {% endautoescape %}
 {% endblock %}
