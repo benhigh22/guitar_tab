@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<form class="" action="" method="get">
+  <input type="text" name="search_string" placeholder="Enter Song">
+  <input type="submit" value="Search">
+</form>
+<br>
+{% autoescape off %}
+{{ scraped_content }}
+{% endautoescape %}
+{% endblock %}
