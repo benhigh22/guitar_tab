@@ -3,11 +3,11 @@
     padding-top: 40px;
     padding-left: 20px;
     padding-right: 20px;
-    border: solid 6px purple lighten-1;
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 5px;
     webkit-border-shadow:10px 10px 5px rgb(200,200,200);
+    border-color: purple
 }
 
 .tablink{
